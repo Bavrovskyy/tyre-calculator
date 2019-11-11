@@ -1,0 +1,9 @@
+.button {
+    box-sizing: border-box;
+    /* font-family: 'Bebas Neue'; */
+    font-size: 30px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    padding: 10px 32px;
+    position: absolute;
+}
