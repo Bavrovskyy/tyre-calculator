@@ -1,18 +1,30 @@
 import React from 'react';
-import './App.css';
+import './app.css';
+import { WelcomePage } from '../welcome-page/welcome-page';
+import { SelectValuePage } from '../select-page/select-page';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>
-          Шинный калькулятор
-        </h1>
-      </header>
-      {/* <Button /> */}
-      {/* <SelectValue /> */}
-    </div>
-  );
+export class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      page: 'welcome',
+    };
+  }
+
+  changePage(page) {
+    this.setState({ page });
+  }
+
+  render() {
+    if (this.state.page === 'welcome') {
+      return (
+        <WelcomePage onClick={() => this.changePage('select-value')} />
+      );
+    }
+    if (this.state.page === 'select-value') {
+      return (
+        <SelectValuePage />
+      );
+    }
+  }
 }
-
-export default App;
