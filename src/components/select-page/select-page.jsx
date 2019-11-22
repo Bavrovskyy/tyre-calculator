@@ -6,12 +6,12 @@ export class SelectValuePage extends React.Component {
   constructor() {
     super();
     this.state = {
-      a: 145,
-      b: 25,
-      c: 12,
-      d: 145,
-      e: 25,
-      f: 12
+      oldWidth: 145,
+      oldHeight: 25,
+      oldDiameter: 12,
+      newWidth: 145,
+      newHeight: 25,
+      newDiameter: 12
     }
     const arr = [
       [145, 155, 165, 175, 185, 195, 205, 215, 225, 235, 245, 255, 265, 275, 285, 295, 305, 315, 325],
@@ -22,32 +22,27 @@ export class SelectValuePage extends React.Component {
   }
 
   onOptionChange0(event) {
-    let a = +event.target.value;
-    this.setState({a: a })
+    this.setState({oldWidth: +event.target.value })
   }
+
   onOptionChange1(event) {
-    let b = +event.target.value;
-    this.setState({b: b })
+    this.setState({oldHeight: +event.target.value })
   }
 
   onOptionChange2(event) {
-    let c = +event.target.value;
-    this.setState({c: c })
+    this.setState({oldDiameter: +event.target.value })
   }
 
   onOptionChange3(event) {
-    let d = +event.target.value;
-    this.setState({d: d })
+    this.setState({newWidth: +event.target.value })
   }
 
   onOptionChange4(event) {
-    let e = +event.target.value;
-    this.setState({e: e })
+    this.setState({newHeight: +event.target.value })
   }
 
   onOptionChange5(event) {
-    let f = +event.target.value;
-    this.setState({f: f })
+    this.setState({newDiameter: +event.target.value })
   }
 
   changePage(page) {
@@ -56,6 +51,7 @@ export class SelectValuePage extends React.Component {
 
 
   render() {
+    console.log(this.state.newWidth, this.state.newHeight, this.state.newDiameter)
     const tags0 = this.arr[0].map(option1 => (
       <option key={option1}
         value={option1}>
@@ -107,7 +103,9 @@ export class SelectValuePage extends React.Component {
     }
     if (this.state.page === 'result') {
       return (
-        <Result />
+        <Result
+          {...this.state}
+        />
       );
     }
 
@@ -134,13 +132,13 @@ export class SelectValuePage extends React.Component {
 
         <h2>Изменение</h2>
         <div>
-          {this.state.a} {this.state.d} {this.state.d - this.state.a}
+          {this.state.oldWidth} {this.state.newWidth} {this.state.newWidth - this.state.oldWidth}
         </div>
         <div>
-          {this.state.b} {this.state.e} {this.state.e - this.state.b}
+          {this.state.oldHeight} {this.state.newHeight} {this.state.newHeight - this.state.oldHeight}
         </div>
         <div>
-          {this.state.c} {this.state.f} {this.state.f - this.state.c}
+          {this.state.oldDiameter} {this.state.newDiameter} {this.state.newDiameter - this.state.oldDiameter}
         </div>
 
         <button onClick={() => this.changePage('result')}>Рассчитать</button>
