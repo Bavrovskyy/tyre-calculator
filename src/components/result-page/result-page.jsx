@@ -62,8 +62,33 @@ export class Result extends React.Component {
 
         const ob1 = (Math.pow(90, 5) / oldCircum);
         const ob2 = (Math.pow(90, 5) / newCircum);
-        /* const obDif = (((ob2 - ob1) * 100) / ob1).toFixed(0); */
         const speedErr = (((ob2 - ob1) * 100) / ob1).toFixed(0);
+        let resultSpeed;
+        let resultSpeedErr;
+
+        if (speedErr > 0) {
+            resultSpeed = `Скорость спидометра увеличится на ${Math.abs(speedErr)}%`;
+            resultSpeedErr = (90 + (speedErr * 0.9)).toFixed(1);
+        }
+        else if (speedErr < 0) {
+            resultSpeed = `Скорость спидометра уменьшится на ${Math.abs(speedErr)}%`;
+            resultSpeedErr = (90 - (Math.abs(speedErr) * 0.9)).toFixed(1);
+        }
+        else {
+            resultSpeed = `Скорость спидометра не изменится`;
+        }
+
+        /*Display result massage*/
+
+        const perc = Math.abs(tyreDiameterDif * 100) / newTyreDiameter;
+        let resultMassage;
+
+        if (perc < 3) {
+            resultMassage = `Диаметр колеса отличается менее чем на 3%. Это безопасно.`;
+        }
+        else {
+            resultMassage = `Диаметр колеса отличается более чем на 3%. Это опасно!!!`;
+        }
 
 
 
@@ -111,14 +136,15 @@ export class Result extends React.Component {
                             <tr>
                                 <td>Изменение клиренса</td>
                                 <td>{resultClirents}</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
                             </tr>
                         </tbody>
                     </table>
                     <div>
-                        {/* <p>При реальной скорости 90 км/ч, спидометр будет показывать {speedErr} км/ч.</p> */}
-                        <p>Скорость спидометра изменится на {speedErr}%</p>
+                        <p>{resultSpeed}</p>
+                        <p>При реальной скорости 90 км/ч, спидометр будет показывать {resultSpeedErr}км/ч.</p>
+                    </div>
+                    <div>
+                        {resultMassage}
                     </div>
 
                     <button onClick={() => this.changePage('select-value')}>Назад</button>
