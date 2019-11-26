@@ -76,6 +76,7 @@ export class Result extends React.Component {
         }
         else {
             resultSpeed = `Скорость спидометра не изменится`;
+            resultSpeedErr = 90;
         }
 
         /*Display result massage*/
@@ -94,60 +95,76 @@ export class Result extends React.Component {
 
         if (this.state.page === 'result') {
             return (
-                <div>
-                    <h3>Новый размер</h3>
-                    <div>
-                        {this.props.newWidth}&nbsp;/&nbsp;{this.props.newHeight}&nbsp;R&nbsp;{this.props.newDiameter}
+                <div id='result-page'>
+                    <div className='curent-size'>
+                        <div className='curent-size-conteiner'>
+                            <p className='curent-size-title'>Новый размер</p>
+                            <div className='curent-size-item'>
+                                {this.props.newWidth}
+                            </div>
+                            &nbsp;/&nbsp;
+                            <div className='curent-size-item'>
+                                {this.props.newHeight}
+                            </div>
+                            &nbsp;R&nbsp;
+                            <div className='curent-size-item'>
+                                {this.props.newDiameter}
+                            </div>
+                        </div>
                     </div>
-                    <table border="1px">
-                        <thead>
-                            <tr>
-                                <th>Показатель</th>
-                                <th>Старый</th>
-                                <th>Новый</th>
-                                <th>Изменение</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Диаметр колеса</td>
-                                <td>{oldTyreDiameter} см</td>
-                                <td>{newTyreDiameter} см</td>
-                                <td>{tyreDiameterDif} см</td>
-                            </tr>
-                            <tr>
-                                <td>Ширина колеса</td>
-                                <td>{oldWidthSM} см</td>
-                                <td>{newWidthSM} см</td>
-                                <td>{widthDif} см</td>
-                            </tr>
-                            <tr>
-                                <td>Окружность</td>
-                                <td>{oldCircum} см</td>
-                                <td>{newCircum} см</td>
-                                <td>{circumDif} см</td>
-                            </tr>
-                            <tr>
-                                <td>Оборотов на км</td>
-                                <td>{oldCount} об</td>
-                                <td>{newCount} об</td>
-                                <td>{countDif} об</td>
-                            </tr>
-                            <tr>
-                                <td>Изменение клиренса</td>
-                                <td>{resultClirents}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div>
-                        <p>{resultSpeed}</p>
-                        <p>При реальной скорости 90 км/ч, спидометр будет показывать {resultSpeedErr}км/ч.</p>
+                    <div className='result-conteiner'>
+                        <table className='result-table'>
+                            <thead>
+                                <tr>
+                                    <th>Показатель</th>
+                                    <th>Старый</th>
+                                    <th>Новый</th>
+                                    <th>Изменение</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Диаметр колеса</td>
+                                    <td>{oldTyreDiameter} см</td>
+                                    <td>{newTyreDiameter} см</td>
+                                    <td>{tyreDiameterDif} см</td>
+                                </tr>
+                                <tr>
+                                    <td>Ширина колеса</td>
+                                    <td>{oldWidthSM} см</td>
+                                    <td>{newWidthSM} см</td>
+                                    <td>{widthDif} см</td>
+                                </tr>
+                                <tr>
+                                    <td>Окружность</td>
+                                    <td>{oldCircum} см</td>
+                                    <td>{newCircum} см</td>
+                                    <td>{circumDif} см</td>
+                                </tr>
+                                <tr>
+                                    <td>Оборотов на км</td>
+                                    <td>{oldCount} об</td>
+                                    <td>{newCount} об</td>
+                                    <td>{countDif} об</td>
+                                </tr>
+                                <tr>
+                                    <td>Изменение клиренса</td>
+                                    <td colspan="3">{resultClirents}</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div>
-                        {resultMassage}
+                    
+                    <div className='result-footer'>
+                        <div className='result-speed'>
+                            <p>{resultSpeed}</p>
+                            <p>При реальной скорости 90 км/ч, спидометр будет показывать {resultSpeedErr} км/ч.</p>
+                        </div>
+                        <div className='result-massage'>
+                            {resultMassage}
+                        </div>
+                        <button className='button button-result' onClick={() => this.changePage('select-value')}>Назад</button>
                     </div>
-
-                    <button onClick={() => this.changePage('select-value')}>Назад</button>
                 </div>
             );
         }

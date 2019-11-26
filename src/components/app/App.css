@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'latoblack';
+    src: local('latoblack'),
+        url(./fonts/lato-black-webfont/lato-black-webfont.woff2) format('woff2'),
+        url(./fonts/lato-black-webfont/lato-black-webfont.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'latomedium';
+    src: local('latomedium'),
+        url(./fonts/lato-medium-webfont/lato-medium-webfont.woff2) format('woff2'),
+        url(./fonts/lato-medium-webfont/lato-medium-webfont.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'latoregular';
+    src: local('latoregular'),
+        url(./fonts/lato-regular-webfont/lato-regular-webfont.woff2) format('woff2'),
+        url(./fonts/lato-regular-webfont/lato-regular-webfont.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Bebas Neue';
+    src: local('Bebas Neue'),
+        url(./fonts/bebasneuebold/bebasneuebold.woff2) format('woff2'),
+        url(./fonts/bebasneuebold/bebasneuebold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'yu_gothicregular';
+    src: local('yu_gothicregular'),
+        url(./fonts/yugothic-webfont/yugothic-webfont.woff2) format('woff2'),
+        url(./fonts/yugothic-webfont/yugothic-webfont.woff) format('woff');
+}
+
+body{
+    font-family: 'latomedium';
+    font-size: 14px;
+    background-color: rgb(233, 233, 233);
+    margin: 0;
+}

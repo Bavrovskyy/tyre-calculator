@@ -1,0 +1,129 @@
+#select-page {
+    background-color: #fff;
+	min-height: 640px;
+    max-width: 360px;
+    margin: 0px auto;
+    position: relative;
+}
+
+.select-value {
+    background: url(./img/bg.jpg) no-repeat top center;
+    padding: 25px 0 25px;
+    font-size: 25px;
+}
+
+.title-select {
+    font-family: 'Bebas Neue';
+    font-size: 18px;
+    color: #000;
+    text-align: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.select-item {
+    font-size: 25px;
+    border-radius: 3px;
+    border-color: #fff;
+    margin: 0 5px;
+}
+
+.old-size {
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #fec400;
+    margin: 15px 45px;
+    padding: 8px;
+}
+
+.new-size {
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #e36804;
+    margin: 15px 45px;
+    padding: 8px;
+}
+
+.header-select {
+    font-family: 'Bebas Neue';
+    font-size: 25px;
+    color: #000;
+    text-align: center;
+}
+
+.visual-value {
+    background: url(./img/visual-result.jpg) no-repeat top center;
+	background-size: cover;
+    margin: 0px auto;
+    position: relative;
+    font-size: 14px;
+    margin-top: 22px;
+    min-height: 220px;
+}
+
+.old-width {
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #fec400;
+    position: absolute;
+    right: 222px;
+    top: 5px;
+    padding: 2px 3px;
+}
+
+.new-width {
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #e36804;
+    position: absolute;
+    left: 215px;
+    top: 5px;
+    padding: 2px 3px;
+}
+
+.old-height {
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #fec400;
+    position: absolute;
+    left: 15px;
+    top: 60px;
+    padding: 2px 3px;
+}
+
+.new-height {
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #e36804;
+    position: absolute;
+    right: 15px;
+    top: 60px;
+    padding: 2px 3px;
+}
+
+.old-diameter {
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #fec400;
+    position: absolute;
+    right: 270px;
+    bottom: 60px;
+    padding: 2px 3px;
+}
+
+.new-diameter {
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #e36804;
+    position: absolute;
+    left: 270px;
+    bottom: 60px;
+    padding: 2px 3px;
+}
+
+
+
+.button-select {
+    margin-left: -90px;
+}
+
