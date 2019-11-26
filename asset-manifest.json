@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/tyre-calculator/static/css/main.b47a5dd8.chunk.css",
+    "main.js": "/tyre-calculator/static/js/main.503f0078.chunk.js",
+    "main.js.map": "/tyre-calculator/static/js/main.503f0078.chunk.js.map",
+    "runtime-main.js": "/tyre-calculator/static/js/runtime-main.77085be1.js",
+    "runtime-main.js.map": "/tyre-calculator/static/js/runtime-main.77085be1.js.map",
+    "static/js/2.4147ea42.chunk.js": "/tyre-calculator/static/js/2.4147ea42.chunk.js",
+    "static/js/2.4147ea42.chunk.js.map": "/tyre-calculator/static/js/2.4147ea42.chunk.js.map",
+    "index.html": "/tyre-calculator/index.html",
+    "precache-manifest.4604071f795e1aae8e0c1b8ec6e8f513.js": "/tyre-calculator/precache-manifest.4604071f795e1aae8e0c1b8ec6e8f513.js",
+    "service-worker.js": "/tyre-calculator/service-worker.js",
+    "static/css/main.b47a5dd8.chunk.css.map": "/tyre-calculator/static/css/main.b47a5dd8.chunk.css.map",
+    "static/media/app.css": "/tyre-calculator/static/media/yugothic-webfont.f4e21129.woff",
+    "static/media/result-page.css": "/tyre-calculator/static/media/bg.84c9886a.jpg",
+    "static/media/welcome-page.css": "/tyre-calculator/static/media/bg.85662d28.jpg",
+    "static/media/select-page.css": "/tyre-calculator/static/media/visual-result.a7316163.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.77085be1.js",
+    "static/js/2.4147ea42.chunk.js",
+    "static/css/main.b47a5dd8.chunk.css",
+    "static/js/main.503f0078.chunk.js"
+  ]
+}
