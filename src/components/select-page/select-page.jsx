@@ -51,7 +51,6 @@ export class SelectValuePage extends React.Component {
 
 
   render() {
-    console.log(this.state.newWidth, this.state.newHeight, this.state.newDiameter)
     const tags0 = this.arr[0].map(option1 => (
       <option key={option1}
         value={option1}>
@@ -111,37 +110,61 @@ export class SelectValuePage extends React.Component {
 
 
     return (
-      <div>
-        <h3>Старый размер</h3>
-        <div>
-          <select  value={this.props.value} onChange={this.onOptionChange0.bind(this)}>{tags0}</select>
-          &nbsp;/&nbsp;
-          <select  value={this.props.value} onChange={this.onOptionChange1.bind(this)}>{tags1}</select>
-          &nbsp;R&nbsp;
-          <select  value={this.props.value} onChange={this.onOptionChange2.bind(this)}>{tags2}</select>
+      <div id='select-page'>
+        <div className='select-value'>
+          <div className='old-size'>
+            <p className='title-select'>Текущий размер</p>
+            <div className='select-conteiner'>
+              <select className='select-item' value={this.props.value} onChange={this.onOptionChange0.bind(this)}>{tags0}</select>
+              &nbsp;/&nbsp;
+              <select className='select-item' value={this.props.value} onChange={this.onOptionChange1.bind(this)}>{tags1}</select>
+              &nbsp;R&nbsp;
+              <select className='select-item' value={this.props.value} onChange={this.onOptionChange2.bind(this)}>{tags2}</select>
+            </div>
+          </div>
+
+          <div className='new-size'>
+            <p className='title-select'>Новый размер</p>
+            <select className='select-item' value={this.props.value} onChange={this.onOptionChange3.bind(this)}>{tags3}</select>
+            &nbsp;/&nbsp;
+            <select className='select-item' value={this.props.value} onChange={this.onOptionChange4.bind(this)}>{tags4}</select>
+            &nbsp;R&nbsp;
+            <select className='select-item' value={this.props.value} onChange={this.onOptionChange5.bind(this)}>{tags5}</select>
+          </div>
         </div>
 
-        <h3>Новый размер</h3>
         <div>
-          <select  value={this.props.value} onChange={this.onOptionChange3.bind(this)}>{tags3}</select>
-          &nbsp;/&nbsp;
-          <select  value={this.props.value} onChange={this.onOptionChange4.bind(this)}>{tags4}</select>
-          &nbsp;R&nbsp;
-          <select  value={this.props.value} onChange={this.onOptionChange5.bind(this)}>{tags5}</select>
+          <p className='header-select'>Изменение</p>
         </div>
 
-        <h2>Изменение</h2>
-        <div>
-          {this.state.oldWidth} {this.state.newWidth} {this.state.newWidth - this.state.oldWidth}
-        </div>
-        <div>
-          {this.state.oldHeight} {this.state.newHeight} {this.state.newHeight - this.state.oldHeight}
-        </div>
-        <div>
-          {this.state.oldDiameter} {this.state.newDiameter} {this.state.newDiameter - this.state.oldDiameter}
-        </div>
+        <div className='visual-value' >
+          
+          <div className='old-width'>
+            {this.state.oldWidth} мм
+          </div>
 
-        <button onClick={() => this.changePage('result')}>Рассчитать</button>
+          <div className='new-width'>
+            {this.state.newWidth} мм ({this.state.newWidth - this.state.oldWidth})
+          </div>
+
+          <div className='old-height'>
+            {this.state.oldHeight} %
+          </div>
+
+          <div className='new-height'>
+            {this.state.newHeight} % ({this.state.newHeight - this.state.oldHeight})
+          </div>
+
+          <div className='old-diameter'>
+            {this.state.oldDiameter} "
+          </div>
+
+          <div className='new-diameter'>
+            {this.state.newDiameter} " ({this.state.newDiameter - this.state.oldDiameter})
+          </div>
+
+        </div>
+        <button className='button button-select' onClick={() => this.changePage('result')}>Рассчитать</button>
       </div>
     );
   }
