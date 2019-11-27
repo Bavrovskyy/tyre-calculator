@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8e29b77d6b56a581a103721af68f8098",
+    "revision": "a5760851c8fde72ffab9c5c7a507f997",
     "url": "/tyre-calculator/index.html"
   },
   {
-    "revision": "a13dc8fa4682f6212ad5",
-    "url": "/tyre-calculator/static/css/main.b47a5dd8.chunk.css"
+    "revision": "d87ea19f4cb1708a0265",
+    "url": "/tyre-calculator/static/css/main.0acf88b0.chunk.css"
   },
   {
     "revision": "22c9bbb01cb5157bea79",
     "url": "/tyre-calculator/static/js/2.4147ea42.chunk.js"
   },
   {
-    "revision": "a13dc8fa4682f6212ad5",
-    "url": "/tyre-calculator/static/js/main.503f0078.chunk.js"
+    "revision": "d87ea19f4cb1708a0265",
+    "url": "/tyre-calculator/static/js/main.ac06afe7.chunk.js"
   },
   {
     "revision": "3e3aeb2be4b72b02b955",
@@ -64,8 +64,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tyre-calculator/static/media/lato-regular-webfont.bafda91e.woff"
   },
   {
-    "revision": "a73161635a2736b5fc969ba97627d7c6",
-    "url": "/tyre-calculator/static/media/visual-result.a7316163.jpg"
+    "revision": "302f504f07be33dcd82ffb1629bc4266",
+    "url": "/tyre-calculator/static/media/visual-result.302f504f.jpg"
   },
   {
     "revision": "270e2be41ed72a88289860d8110be93a",

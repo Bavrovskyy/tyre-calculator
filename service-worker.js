@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/tyre-calculator/precache-manifest.4604071f795e1aae8e0c1b8ec6e8f513.js"
+  "/tyre-calculator/precache-manifest.74d622f5867a9c16bb8bd175901aa448.js"
 );
 
 self.addEventListener('message', (event) => {
