@@ -84,21 +84,25 @@ export class Result extends React.Component {
         let resultMassage;
         let colorBox;
         
-        if (perc < 3) {
+        if (perc > 0 && perc < 3) {
             resultMassage = `Диаметр колеса отличается менее чем на 3%. Это безопасно.`;
             colorBox = {
                 border: "1px solid green",
                 backgroundColor: "rgba(0, 128, 0, 0.85)"
             };
         }
-        else {
+        else if (perc > 3) {
             resultMassage = `Диаметр колеса отличается более чем на 3%. Это опасно!!!`;
             colorBox = {
                 border: "1px solid red",
                 backgroundColor: "rgba(255, 0, 0, 0.85)"
             };
-
         }
+        else {
+            resultMassage = `Диаметр колеса не изменится`;
+        }
+
+        
 
 
         if (this.state.page === 'result') {

@@ -108,6 +108,29 @@ export class SelectValuePage extends React.Component {
       );
     }
 
+    let widthDiff = this.state.newWidth - this.state.oldWidth;
+    if (widthDiff > 0) {
+      widthDiff = `+${widthDiff}`;
+    }
+    else {
+      widthDiff = `${widthDiff}`;
+    }
+
+    let heightDiff = this.state.newHeight - this.state.oldHeight;
+    if (heightDiff > 0) {
+      heightDiff = `+${heightDiff}`;
+    }
+    else {
+      heightDiff = `${heightDiff}`;
+    }
+
+    let diameterDiff = this.state.newDiameter - this.state.oldDiameter;
+    if (diameterDiff > 0) {
+      diameterDiff = `+${diameterDiff}`;
+    }
+    else {
+      diameterDiff = `${diameterDiff}`;
+    }
 
     return (
       <div id='select-page'>
@@ -144,7 +167,7 @@ export class SelectValuePage extends React.Component {
           </div>
 
           <div className='new-width'>
-            {this.state.newWidth} мм ({this.state.newWidth - this.state.oldWidth})
+            {this.state.newWidth} мм ({widthDiff})
           </div>
 
           <div className='old-height'>
@@ -152,7 +175,7 @@ export class SelectValuePage extends React.Component {
           </div>
 
           <div className='new-height'>
-            {this.state.newHeight} % ({this.state.newHeight - this.state.oldHeight})
+            {this.state.newHeight} % ({heightDiff})
           </div>
 
           <div className='old-diameter'>
@@ -160,7 +183,7 @@ export class SelectValuePage extends React.Component {
           </div>
 
           <div className='new-diameter'>
-            {this.state.newDiameter} " ({this.state.newDiameter - this.state.oldDiameter})
+            {this.state.newDiameter} " ({diameterDiff})
           </div>
 
         </div>
