@@ -16,7 +16,6 @@ export class Result extends React.Component {
         this.setState({ page });
     }
 
-
     render() {
 
         /*Geting Tyre Dimeter Difference*/
@@ -83,14 +82,23 @@ export class Result extends React.Component {
 
         const perc = Math.abs(tyreDiameterDif * 100) / newTyreDiameter;
         let resultMassage;
-
+        let colorBox;
+        
         if (perc < 3) {
             resultMassage = `Диаметр колеса отличается менее чем на 3%. Это безопасно.`;
+            colorBox = {
+                border: "1px solid green",
+                backgroundColor: "rgba(0, 128, 0, 0.85)"
+            };
         }
         else {
             resultMassage = `Диаметр колеса отличается более чем на 3%. Это опасно!!!`;
-        }
+            colorBox = {
+                border: "1px solid red",
+                backgroundColor: "rgba(255, 0, 0, 0.85)"
+            };
 
+        }
 
 
         if (this.state.page === 'result') {
@@ -160,7 +168,7 @@ export class Result extends React.Component {
                             <p>{resultSpeed}</p>
                             <p>При реальной скорости 90 км/ч, спидометр будет показывать {resultSpeedErr} км/ч.</p>
                         </div>
-                        <div className='result-massage'>
+                        <div className='result-massage' style={colorBox}>
                             {resultMassage}
                         </div>
                         <button className='button button-result' onClick={() => this.changePage('select-value')}>Назад</button>
