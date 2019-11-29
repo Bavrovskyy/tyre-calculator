@@ -15,3 +15,5 @@ Plan
 	4.2. Front-end web application development
 	4.3. Application functionality development
 5. Code optimization and testing
+
+https://bavrovskyy.github.io/tyre-calculator/
