@@ -1,4 +1,5 @@
 ## MyProject
+https://bavrovskyy.github.io/tyre-calculator/
 
 A visual tire calculator is a tool used by tire market professionals,
  car enthusiasts, and even athletes to determine the optimal tire or wheel replacement.
@@ -15,5 +16,3 @@ Plan
 	4.2. Front-end web application development
 	4.3. Application functionality development
 5. Code optimization and testing
-
-https://bavrovskyy.github.io/tyre-calculator/
